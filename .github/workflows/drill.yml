@@ -1,0 +1,12 @@
+name: drill.yml
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  stuck-build-drill:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simulate a stuckong CI build (sleep 12 minutes)
+        run: sleep 720
